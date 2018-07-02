@@ -8,6 +8,7 @@ Group project
 ### **By me**
 - UI
 - LocalStorage
+
 [Live DEMO](https://dyminki.github.io/ToDoList/)
 
 ### Screenshoot
