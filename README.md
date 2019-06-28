@@ -14,4 +14,4 @@ Group project.
 
 # Screenshoot
 
-![Image](https://github.com/dyminki/ToDoList/blob/master/todo.jpg)
+![Image](https://github.com/dyminki/ToDoList/blob/master/todo.png)

@@ -100,19 +100,20 @@ html {
     padding-left: 5px;
     font-family: 'Shadows Into Light Two', cursive;
     &:focus {
-        background-color: #e4f1ef;
+        background-color: #f3efc9;
     }
 }
 
 label {
-    color: #4eaaad;
+    color: #e6ad00;
+    font-size: 1.2rem;
 }
 
 /*------------------------------*/
 /*---- Filter box ----*/
 /*------------------------------*/
 .checked {
-    color: #289F8C;
+    color: #e6ad00;
 }
 
 .filter-box {
@@ -185,7 +186,7 @@ label {
 /*------------------------------*/
 
 .completed {
-    background: #e4f1ef;
+    background: #f3efc9;
 }
 
 .hidden {
@@ -212,6 +213,7 @@ label {
         width: 85%;
     }
 }
+
 
 @media only screen and (max-width: 770px) { 
     .task-form-border {
