@@ -1,5 +1,6 @@
 # To Do List
 Group project.
+[Live DEMO](https://dyminki.github.io/ToDoList/)
 
 # Technologies used
 - HTML
@@ -9,8 +10,6 @@ Group project.
 # By me
 - UI
 - LocalStorage
-
-[Live DEMO](https://dyminki.github.io/ToDoList/)
 
 # Screenshoot
 
