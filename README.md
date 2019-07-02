@@ -1,5 +1,6 @@
 # To Do List
-Group project.
+Group project.  
+
 [Live DEMO](https://dyminki.github.io/ToDoList/)
 
 # Technologies used
