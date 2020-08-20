@@ -11,6 +11,7 @@ Group project.
 # By me
 - UI
 - LocalStorage
+- Filter by title
 
 # Screenshoot
 
