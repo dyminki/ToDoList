@@ -84,20 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
         newBtnComplete.innerHTML    = '<i class="far fa-check-circle"></i>';
 
         //Elements classes
-        newLi.classList.add("collection-item");
-        newTask.classList.add("title");
         newDate.classList.add("till");
-        newPriority.classList.add("priority");
-        newDescription.classList.add("remark");
         newBtnDelete.classList.add("task-delete");
         newBtnComplete.classList.add("task-complete");
+        newLi.classList.add("collection-item");
+        newTask.classList.add("title");
+        newPriority.classList.add("priority");
+        newDescription.classList.add("remark");
+        
 
         //Adding elements to li
-        newLi.appendChild(newTask);
+        newLi.appendChild(newDate);
         newLi.appendChild(newBtnDelete);
         newLi.appendChild(newBtnComplete);
+        newLi.appendChild(newTask);
         newLi.appendChild(newPriority);
-        newLi.appendChild(newDate);
         newLi.appendChild(newDescription);
 
         taskList.appendChild(newLi);
@@ -175,11 +176,11 @@ document.addEventListener("DOMContentLoaded", function () {
             newBtnComplete.classList.add("task-complete");
 
             //Adding elements to li
-            newLi.appendChild(newTask);
+            newLi.appendChild(newDate);
             newLi.appendChild(newBtnDelete);
             newLi.appendChild(newBtnComplete);
+            newLi.appendChild(newTask);
             newLi.appendChild(newPriority);
-            newLi.appendChild(newDate);
             newLi.appendChild(newDescription);
 
             taskList.appendChild(newLi);
@@ -212,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var tasks = checkLocalStorage();
 
         tasks.forEach(function(task, index){
-            if( task.title === removedTask.children[0].innerHTML && task.description === removedTask.children[5].innerHTML) {
+            if( task.title === removedTask.children[3].innerHTML && task.description === removedTask.children[5].innerHTML) {
                 tasks.splice(index, 1);
             }
         });
@@ -225,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var tasks = checkLocalStorage();
 
         tasks.forEach(function(task){
-            if(task.title === completedTask.children[0].innerHTML && task.description === completedTask.children[5].innerHTML){
+            if(task.title === completedTask.children[3].innerHTML && task.description === completedTask.children[5].innerHTML){
                 if(task.isCompleted){
                     task.isCompleted = false;
                 }else{
@@ -235,13 +236,14 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
+
     //Filtering tasks by title
     filter.addEventListener("keyup", filterTasks);
 
     function filterTasks(e) {
         const text = e.target.value.toLowerCase();
         document.querySelectorAll('.collection-item').forEach(function(task){
-            const item = task.firstChild.textContent;
+            const item = task.querySelector(".title").textContent;
             if(item.toLowerCase().indexOf(text) != -1){
                 task.style.display = 'block';
             } else {
@@ -249,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
     //function cleaning everything from ls
     function clearTasksFromLocalStorage() {
         localStorage.removeItem('tasks');
